@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillvet"
+version = "1.0.0"
+description = "Vet agent skills before you install them: spec compliance, quality and supply-chain risk for SKILL.md packages."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "the skillvet contributors" }]
+keywords = [
+  "agent-skills",
+  "ai-agents",
+  "claude-code",
+  "codex",
+  "cursor",
+  "supply-chain",
+  "prompt-injection",
+  "security",
+  "linter",
+  "static-analysis",
+  "skill-md",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/Shivp1413/skillvet"
+Documentation = "https://github.com/Shivp1413/skillvet/tree/main/docs"
+Changelog = "https://github.com/Shivp1413/skillvet/blob/main/CHANGELOG.md"
+"Rule catalogue" = "https://github.com/Shivp1413/skillvet/blob/main/docs/rules.md"
+Issues = "https://github.com/Shivp1413/skillvet/issues"
+
+[project.scripts]
+skillvet = "skillvet.cli:main"
+
+[tool.setuptools]
+packages = ["skillvet"]
+
+[tool.setuptools.package-data]
+skillvet = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["error::DeprecationWarning"]
