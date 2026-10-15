@@ -455,12 +455,8 @@ Being honest about the edges is part of being useful:
 
 ---
 
-## Contributing
 
-The most valuable contribution is a **new rule with a test and a fixture** —
-ideally one drawn from a real malicious or broken skill you have seen. Read
-[CONTRIBUTING.md](CONTRIBUTING.md) for the template; a rule is roughly 15 lines
-of declarative metadata plus a pattern.
+
 
 ```bash
 git clone https://github.com/Shivp1413/skillvet.git
